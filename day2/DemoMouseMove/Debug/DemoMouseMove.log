@@ -1,0 +1,53 @@
+﻿生成启动时间为 2020/10/23 21:43:27。
+     1>项目“C:\Users\zousijia\documents\visual studio 2010\Projects\day2\DemoMouseMove\DemoMouseMove.vcxproj”在节点 3 上(build 个目标)。
+     1>InitializeBuildStatus:
+         正在创建“Debug\DemoMouseMove.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+       ClCompile:
+         所有输出均为最新。
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _UNICODE /D UNICODE /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\DemoMouseMove.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt DemoMouseMove.cpp DemoMouseMoveView.cpp
+         DemoMouseMove.cpp
+         正在生成代码...
+         正在跳过...(未检测到相关更改)
+         DemoMouseMoveView.cpp
+       ResourceCompile:
+         所有输出均为最新。
+       ManifestResourceCompile:
+         所有输出均为最新。
+       Link:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\zousijia\documents\visual studio 2010\Projects\Tracker\Debug\DemoMouseMove.exe" /INCREMENTAL /NOLOGO /MANIFEST /ManifestFile:"Debug\DemoMouseMove.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\zousijia\documents\visual studio 2010\Projects\Tracker\Debug\DemoMouseMove.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /ENTRY:"wWinMainCRTStartup" /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\zousijia\documents\visual studio 2010\Projects\Tracker\Debug\DemoMouseMove.lib" /MACHINE:X86 Debug\DemoMouseMove.res
+         Debug\DemoMouseMove.exe.embed.manifest.res
+         Debug\ClassView.obj
+         Debug\DemoMouseMove.obj
+         Debug\DemoMouseMoveDoc.obj
+         Debug\DemoMouseMoveView.obj
+         Debug\FileView.obj
+         Debug\MainFrm.obj
+         Debug\OutputWnd.obj
+         Debug\PropertiesWnd.obj
+         Debug\stdafx.obj
+         Debug\ViewTree.obj
+       Manifest:
+         c:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"Debug\DemoMouseMove.exe.embed.manifest" /manifest Debug\DemoMouseMove.exe.intermediate.manifest "c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\Include\Manifest\dpiaware.manifest"
+         所有输出均为最新。
+       LinkEmbedManifest:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\zousijia\documents\visual studio 2010\Projects\Tracker\Debug\DemoMouseMove.exe" /INCREMENTAL /NOLOGO /MANIFEST /ManifestFile:"Debug\DemoMouseMove.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\zousijia\documents\visual studio 2010\Projects\Tracker\Debug\DemoMouseMove.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /ENTRY:"wWinMainCRTStartup" /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\zousijia\documents\visual studio 2010\Projects\Tracker\Debug\DemoMouseMove.lib" /MACHINE:X86 Debug\DemoMouseMove.res
+         Debug\DemoMouseMove.exe.embed.manifest.res
+         Debug\ClassView.obj
+         Debug\DemoMouseMove.obj
+         Debug\DemoMouseMoveDoc.obj
+         Debug\DemoMouseMoveView.obj
+         Debug\FileView.obj
+         Debug\MainFrm.obj
+         Debug\OutputWnd.obj
+         Debug\PropertiesWnd.obj
+         Debug\stdafx.obj
+         Debug\ViewTree.obj
+         DemoMouseMove.vcxproj -> C:\Users\zousijia\documents\visual studio 2010\Projects\Tracker\Debug\DemoMouseMove.exe
+       FinalizeBuildStatus:
+         正在删除文件“Debug\DemoMouseMove.unsuccessfulbuild”。
+         正在对“Debug\DemoMouseMove.lastbuildstate”执行 Touch 任务。
+     1>已完成生成项目“C:\Users\zousijia\documents\visual studio 2010\Projects\day2\DemoMouseMove\DemoMouseMove.vcxproj”(build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:54.46

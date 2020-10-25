@@ -1,0 +1,22 @@
+﻿生成启动时间为 2020/10/22 9:53:32。
+     1>项目“C:\Users\zousijia\documents\visual studio 2010\Projects\day2\day2_1.3\day2_1.3.vcxproj”在节点 2 上(build 个目标)。
+     1>InitializeBuildStatus:
+         正在创建“Debug\day2_1.3.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+       ClCompile:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _UNICODE /D UNICODE /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt MyAppHello.cpp
+         MyAppHello.cpp
+         _WIN32_WINNT not defined. Defaulting to _WIN32_WINNT_MAXVER (see WinSDKVer.h)
+     1>c:\users\zousijia\documents\visual studio 2010\projects\day2\day2_1.3\myapphello.cpp(18): warning C4002: “ON_WM_LBUTTONDOWN”宏的实参太多
+       Link:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\zousijia\documents\visual studio 2010\Projects\Tracker\Debug\day2_1.3.exe" /NOLOGO /MANIFEST /ManifestFile:"Debug\day2_1.3.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\zousijia\documents\visual studio 2010\Projects\Tracker\Debug\day2_1.3.pdb" /TLBID:1 /ENTRY:"wWinMainCRTStartup" /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\zousijia\documents\visual studio 2010\Projects\Tracker\Debug\day2_1.3.lib" /MACHINE:X86 Debug\MyAppHello.obj
+         day2_1.3.vcxproj -> C:\Users\zousijia\documents\visual studio 2010\Projects\Tracker\Debug\day2_1.3.exe
+       Manifest:
+         c:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\Users\zousijia\documents\visual studio 2010\Projects\Tracker\Debug\day2_1.3.exe;#1" /manifest Debug\day2_1.3.exe.intermediate.manifest "c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\Include\Manifest\dpiaware.manifest"
+       FinalizeBuildStatus:
+         正在删除文件“Debug\day2_1.3.unsuccessfulbuild”。
+         正在对“Debug\day2_1.3.lastbuildstate”执行 Touch 任务。
+     1>已完成生成项目“C:\Users\zousijia\documents\visual studio 2010\Projects\day2\day2_1.3\day2_1.3.vcxproj”(build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:08.19
