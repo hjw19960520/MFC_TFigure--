@@ -61,6 +61,12 @@ CTFigureDlg::CTFigureDlg(CWnd* pParent /*=NULL*/)  //初始化成员列表
 	, b_DrawArrow(false)
 	, m_bDrawArrow(false)
 	, m_bDrawTen(false)
+	, m_bDrawWavy(false)
+	, m_bSizeAll(false)
+	, m_dragPoint(0)
+	, m_bDragFlag(false)
+	, m_iDragFlag(0)
+	, m_bForbidSizeAll(false)
 {
 	m_hIcon = AfxGetApp()->LoadIcon(IDR_MAINFRAME);
 	for(int j=0;j<1024;j++)   //初始化点位
@@ -78,7 +84,7 @@ void CTFigureDlg::DoDataExchange(CDataExchange* pDX)
 	DDX_Control(pDX, IDC_LINEBUTTON, buttonLine);
 	DDX_Control(pDX, IDC_BUTTONTEN, m_buttonTen);
 	DDX_Control(pDX, IDC_ARROWBUTTON, m_buttonArrow);
-	DDX_Control(pDX, IDC_BUTTONWAVY, m_buttonWavy);
+	DDX_Control(pDX, IDC_BWAVY, m_buttonWavy);
 }
 
 BEGIN_MESSAGE_MAP(CTFigureDlg, CDialogEx)  //消息映射 注册
@@ -105,8 +111,9 @@ BEGIN_MESSAGE_MAP(CTFigureDlg, CDialogEx)  //消息映射 注册
 	//ON_STN_CLICKED(IDC_PICTEN, &CTFigureDlg::OnStnClickedPicten)
 	//	ON_BN_CLICKED(IDC_MFCBUTTON1, &CTFigureDlg::OnBnClickedMfcbutton1)
 	ON_BN_CLICKED(IDC_BUTTONTEN, &CTFigureDlg::OnBnClickedButtonten)
-	ON_BN_CLICKED(IDC_BUTTON4, &CTFigureDlg::OnBnClickedButton4)
-	ON_BN_CLICKED(IDC_BUTTONWAVY, &CTFigureDlg::OnBnClickedButtonwavy)
+	//ON_BN_CLICKED(IDC_BUTTON4, &CTFigureDlg::OnBnClickedButton4)
+	//ON_BN_CLICKED(IDC_BUTTONWAVY, &CTFigureDlg::OnBnClickedButtonwavy)
+	ON_BN_CLICKED(IDC_BWAVY, &CTFigureDlg::OnBnClickedBwavy)
 END_MESSAGE_MAP()
 
 
@@ -333,9 +340,45 @@ void CTFigureDlg::OnPaint()
 		//绘制Ten
 		for(int j=0;j<i;j++) 
 		{	
+			//if(m_headPoint3[j] ==m_tailPoint3[j]) continue;
 			DrawTen(m_headPoint3[j], m_tailPoint3[j],15.0,10);
 		}
+		//绘制Wavy
+
+		for(int j=0;j<i;j++) 
+		{	
+			//if(m_headPoint4[j] ==m_tailPoint4[j]) continue;
+			DrawWavy(m_headPoint4[j], m_tailPoint4[j],5);
+		}
+		//Sleep(2);
 	}
+
+	//CClientDC dc(this);
+	//int i=0;
+	//for(std::vector<CPoint>::iterator iter = m_vecPoint.begin();iter !=m_vecPoint.end();iter++)
+	//{
+	//	point[i].x = iter->x;
+	//	point[i].y = iter->y;
+	//	i++;
+	//}
+	//dc.PolyBezier(point,10002);
+	//绘制波形
+	CClientDC dc(this);
+	dc.Rectangle(0,0,10,10);
+	int i=0;
+//TODO: vector 问题需要解决
+	//for (int i=0;i<10000;i++)
+	//{
+	//	point[i] = m_vecPoint[i];
+	//}
+	
+	for(std::vector<CPoint>::iterator iter = m_vecPoint.begin();iter !=m_vecPoint.end();iter++)
+	{
+		point[i] = *iter;	
+		i++;
+	}
+	dc.Polyline(point,10000);
+	dc.Rectangle(0,0,40,40);
 }
 
 //当用户拖动最小化窗口时系统调用此函数取得光标
@@ -460,10 +503,10 @@ void CTFigureDlg::InvertCircle(CDC* pDC,CPoint x,CPoint y)
 
 void CTFigureDlg::OnMouseMove(UINT nFlags, CPoint point)  //鼠标移动消息响应
 {
-	if(m_bDrawLine == TRUE)
+	if(m_bDrawLine == TRUE) 
 	{
 		// TODO: 在此添加消息处理程序代码和/或调用默认值
-		if(m_flagTracking == TRUE && m_bTracking == TRUE) 
+		if(m_flagTracking == TRUE && m_bTracking == TRUE) //绘制预览  前提鼠标始终按下
 		{
 			CClientDC dc(this);
 			InvertLine(&dc,this->m_headPoint[i],this->m_tailPoint[i]);
@@ -473,7 +516,7 @@ void CTFigureDlg::OnMouseMove(UINT nFlags, CPoint point)  //鼠标移动消息响应
 	}
 
 	/***************/
-	if(m_bDrawCircle == TRUE)
+	else if(m_bDrawCircle == TRUE)
 	{
 		// TODO: 在此添加消息处理程序代码和/或调用默认值
 		if(m_flagTracking == TRUE && m_bTracking == TRUE) 
@@ -485,7 +528,7 @@ void CTFigureDlg::OnMouseMove(UINT nFlags, CPoint point)  //鼠标移动消息响应
 		}
 	}
 	/***********************/ 
-	if(m_bDrawArrow == TRUE)
+	else if(m_bDrawArrow == TRUE)
 	{
 		// TODO: 在此添加消息处理程序代码和/或调用默认值
 		if(m_flagTracking == TRUE && m_bTracking == TRUE) 
@@ -497,7 +540,7 @@ void CTFigureDlg::OnMouseMove(UINT nFlags, CPoint point)  //鼠标移动消息响应
 			m_tailPoint2[i] = point;
 		}
 	}
-	if(m_bDrawTen == TRUE)
+	else if(m_bDrawTen == TRUE)
 	{
 		// TODO: 在此添加消息处理程序代码和/或调用默认值
 		if(m_flagTracking == TRUE && m_bTracking == TRUE) 
@@ -509,8 +552,58 @@ void CTFigureDlg::OnMouseMove(UINT nFlags, CPoint point)  //鼠标移动消息响应
 			m_tailPoint3[i] = point;
 		}
 	}
+	else if(m_bDrawWavy == TRUE)
+	{
+		// TODO: 在此添加消息处理程序代码和/或调用默认值
+		if(m_flagTracking == TRUE && m_bTracking == TRUE) 
+		{
+			CClientDC dc(this);
+			InvertLine(&dc,this->m_headPoint4[i],this->m_tailPoint4[i]);  //绘制反转线
+			InvertLine(&dc,this->m_headPoint4[i],point);
+			//DrawArrow( m_headPoint2[i], m_tailPoint2[i],45.0,7);
+			m_tailPoint4[i] = point;
+		}
+	}
+	
+	//判断鼠标是否落在了图形上
+	//if(m_bForbidSizeAll == TRUE)
+	//{
+	for(int j=0;j<i;j++)
+	{	 
+		if(m_bTracking == FALSE)  //鼠标正常移动时候,非按下状态
+		{
+			if((m_headPoint4[j].x-10 < point.x && m_headPoint4[j].x+10 > point.x)
+				&&(m_headPoint4[j].y-10 < point.y && m_headPoint4[j].y+10 > point.y
+				/*&&m_bForbidSizeAll == FALSE*/))
+			{
+				//更改鼠标
+				SetClassLong(this->GetSafeHwnd(),
+					GCL_HCURSOR , 
+					(LONG)LoadCursor(NULL , IDC_SIZEALL));
+				//已找到，做标记 m_bSizeAll
+				m_bSizeAll = TRUE;
+				/*m_bForbidSizeAll = TRUE;*/
+				m_iDragFlag = j;//记录下标
 
-	CDialogEx::OnMouseMove(nFlags, point);
+				break;     //打断j++,此时已经定位到m_headpoint[j]
+			}
+			else
+			{
+				//更改鼠标
+				SetClassLong(this->GetSafeHwnd(),
+					GCL_HCURSOR , 
+					(LONG)LoadCursor(NULL , IDC_ARROW));
+				m_bSizeAll = FALSE;
+				//m_bForbidSizeAll == FALSE;
+			}
+		}
+	}
+	//}
+	//else
+	//{
+	//	m_bForbidSizeAll = TRUE;
+	//}
+	//CDialogEx::OnMouseMove(nFlags, point);
 }
 
 
@@ -521,53 +614,29 @@ void CTFigureDlg::OnLButtonDown(UINT nFlags, CPoint point) //鼠标左键按下
 	SetClassLong(this->GetSafeHwnd(),
 		GCL_HCURSOR , 
 		(LONG)LoadCursor(NULL , IDC_CROSS));
+
 	//AfxMessageBox(_T("测试"));
-	if(m_bDrawLine == TRUE)                   //选择直线
+	//选择直线
+	if(m_bDrawLine == TRUE&&m_bSizeAll == FALSE)
 	{
-		if(m_bDrawLine == TRUE)
-		{
-			m_bTracking = TRUE;              //点位追踪
-
-			char *p = "test";                                      //文字输出转换
-			char p1[10];
-			sprintf(p1,"%d,%d",point.x,point.y);
-			CString str(p1);
-
-			CClientDC dc(this);
-			//CBrush brush((255,255,255));
-			//dc.FillRect(CRect(2,86,64,106),&brush);
-
-			dc.SelectStockObject(WHITE_BRUSH );
-			dc.Rectangle(CRect(2,86,70,106));
-			dc.DrawText(str,CRect(2,86,70,106),DT_CENTER);   //2,86  64,106
-			//AfxMessageBox(str);
-			m_flagTracking = TRUE;
-			//记录左键位置
-			m_headPoint[i] = point;
-			m_tailPoint[i] = point;
-			CDialogEx::OnLButtonDown(nFlags, point);
-		}
+		m_bTracking = TRUE;              //点位追踪
+		drawCordinate(point);
+		//AfxMessageBox(str);
+		m_flagTracking = TRUE;
+		//记录左键位置
+		m_headPoint[i] = point;
+		m_tailPoint[i] = point;
+		CDialogEx::OnLButtonDown(nFlags, point);
 	}
 
+
 	/****************************/
-	if(m_bDrawCircle == TRUE)  //选择了实心圆
+	if(m_bDrawCircle == TRUE&&m_bSizeAll == FALSE)  //选择了实心圆
 	{
 		if(m_bDrawCircle == TRUE)
 		{
 			m_bTracking = TRUE;  
-
-			char *p = "test";                                      //文字输出转换
-			char p1[10];
-			sprintf(p1,"%d,%d",point.x,point.y);
-			CString str(p1);
-
-			CClientDC dc(this);
-			//CBrush brush((255,255,255));
-			//dc.FillRect(CRect(2,86,64,106),&brush);
-
-			dc.SelectStockObject(WHITE_BRUSH );
-			dc.Rectangle(CRect(2,86,70,106));
-			dc.DrawText(str,CRect(2,86,70,106),DT_CENTER);   //2,86  64,106
+			drawCordinate(point);
 			//AfxMessageBox(str);
 			m_flagTracking = TRUE;
 			//记录左键位置
@@ -578,24 +647,12 @@ void CTFigureDlg::OnLButtonDown(UINT nFlags, CPoint point) //鼠标左键按下
 	}
 
 	//选择了箭头  /***********************/
-	if(m_bDrawArrow == TRUE)  //选择了箭头
+	if(m_bDrawArrow == TRUE&&m_bSizeAll == FALSE)  //选择了箭头
 	{
 		if(m_bDrawArrow == TRUE)
 		{
 			m_bTracking = TRUE;  
-
-			char *p = "test";                                      //文字输出转换
-			char p1[10];
-			sprintf(p1,"%d,%d",point.x,point.y);
-			CString str(p1);
-
-			CClientDC dc(this);
-			//CBrush brush((255,255,255));
-			//dc.FillRect(CRect(2,86,64,106),&brush);
-
-			dc.SelectStockObject(WHITE_BRUSH );
-			dc.Rectangle(CRect(2,86,70,106));
-			dc.DrawText(str,CRect(2,86,70,106),DT_CENTER);   //2,86  64,106
+			drawCordinate(point);
 			//AfxMessageBox(str);
 			m_flagTracking = TRUE;
 			//记录左键位置
@@ -604,39 +661,69 @@ void CTFigureDlg::OnLButtonDown(UINT nFlags, CPoint point) //鼠标左键按下
 			CDialogEx::OnLButtonDown(nFlags, point);
 		}
 	}
-	if(m_bDrawTen == TRUE)  //m_bDrawTen
+	if(m_bDrawTen == TRUE &&m_bSizeAll == FALSE)  //m_bDrawTen
 	{
 		m_bTracking = TRUE;  
-		char *p = "test";                                      //文字输出转换
-		char p1[10];
-		sprintf(p1,"%d,%d",point.x,point.y);
-		CString str(p1);
-
-		CClientDC dc(this);
-		//CBrush brush((255,255,255));
-		//dc.FillRect(CRect(2,86,64,106),&brush);
-
-		dc.SelectStockObject(WHITE_BRUSH );
-		dc.Rectangle(CRect(2,86,70,106));
-		dc.DrawText(str,CRect(2,86,70,106),DT_CENTER);   //2,86  64,106
+		drawCordinate(point);
 		//AfxMessageBox(str);
 		m_flagTracking = TRUE;
 		//记录左键位置
 		m_headPoint3[i] = point;
 		m_tailPoint3[i] = point;
+		this->Invalidate(1);
 		CDialogEx::OnLButtonDown(nFlags, point);
 	}
+
+	///////////////////////////TODO:DOWN时 会更改m_tailPoint4[i]点的位置，
+	////如果此时是四项箭头状态，则不能改变点的位置
+	if(m_bDrawWavy == TRUE && m_bSizeAll == FALSE)  //m_bDrawWavy
+	{
+		m_bTracking = TRUE;  
+		drawCordinate(point); 
+		//AfxMessageBox(str);
+		m_flagTracking = TRUE;
+		//记录左键位置
+		m_headPoint4[i] = point;
+		m_tailPoint4[i] = point;
+		CDialogEx::OnLButtonDown(nFlags, point);
+	}
+
+
+	/////////////////
+	if(m_bSizeAll == TRUE)
+	{	
+		m_bTracking = FALSE; 
+		m_flagTracking = FALSE;
+		//AfxMessageBox(_T("test"));
+		//记录此处开始点击 拖动的点位 
+		m_dragPoint = point;
+		m_bDragFlag = TRUE;
+	}
+
 }
 
-
+void CTFigureDlg::drawCordinate(CPoint point)
+{
+	char *p = "test";                                      //文字输出转换
+	char p1[10];
+	sprintf(p1,"%d,%d",point.x,point.y);
+	CString str(p1);
+	CClientDC dc(this);
+	//CBrush brush((255,255,255));
+	//dc.FillRect(CRect(2,86,64,106),&brush);
+	dc.SelectStockObject(WHITE_BRUSH );
+	dc.Rectangle(CRect(2,86,70,106));
+	dc.DrawText(str,CRect(2,86,70,106),DT_CENTER);   //2,86  64,106
+}
 
 void CTFigureDlg::OnLButtonUp(UINT nFlags, CPoint point)   //左键松开
-{
+{	
+
 	//设置鼠标样式
 	SetClassLong(this->GetSafeHwnd(),
 		GCL_HCURSOR , 
 		(LONG)LoadCursor(NULL , IDC_ARROW));
-	 //TODO: 在此添加消息处理程序代码和/或调用默认值
+	//TODO: 在此添加消息处理程序代码和/或调用默认值
 	if(m_bDrawLine == TRUE)
 	{
 		m_bTracking = FALSE;              //停止追踪
@@ -644,7 +731,7 @@ void CTFigureDlg::OnLButtonUp(UINT nFlags, CPoint point)   //左键松开
 		if(m_flagTracking == TRUE)
 		{	
 			m_tailPoint[i] = point;
-			i++;
+			++i;
 			//CClientDC dc(this);
 			//char p1[10];
 			//sprintf(p1,"%d,%d",m_headPoint);
@@ -652,52 +739,91 @@ void CTFigureDlg::OnLButtonUp(UINT nFlags, CPoint point)   //左键松开
 			//AfxMessageBox(str);
 			//dc.MoveTo(m_headPoint);
 			//dc.LineTo(m_tailPoint);
-			this->Invalidate(0);
+			this->Invalidate(1);
 		}
 	}
 
-	if(m_bDrawCircle == TRUE)
+	else if(m_bDrawCircle == TRUE)
 	{
 		m_bTracking = FALSE;
 		//CDialogEx::OnLButtonUp(nFlags, point);
 		if(m_flagTracking == TRUE)
 		{	
 			m_tailPoint1[i] = point;
-			i++;
-			this->Invalidate(0);
+			++i;
+			this->Invalidate(1);
 		}
 	}
 
-	if(m_bDrawArrow == TRUE)
+	else if(m_bDrawArrow == TRUE)
 	{
 		m_bTracking = FALSE;
 		//CDialogEx::OnLButtonUp(nFlags, point);
 		if(m_flagTracking == TRUE)
 		{	
 			m_tailPoint2[i] = point;
-			i++;
-			this->Invalidate(0);
+			++i;
+			this->Invalidate(1);
 		}
 	}
 
-	if(m_bDrawTen == TRUE)
+	else if(m_bDrawTen == TRUE)
 	{
 		m_bTracking = FALSE;
 		//CDialogEx::OnLButtonUp(nFlags, point);
 		if(m_flagTracking == TRUE)
 		{	
 			m_tailPoint3[i] = point;
-			i++;
-			this->Invalidate(0);
+			++i;
+			this->Invalidate(1);
+		}
+	}
+	////////////////////
+	else if(m_bDrawWavy == TRUE)
+	{
+		m_bTracking = FALSE;
+		//CDialogEx::OnLButtonUp(nFlags, point);
+		if(m_flagTracking == TRUE)
+		{	
+			m_tailPoint4[i] = point;
+			++i;
+			this->Invalidate(1);
 		}
 	}
 
 
+
+	///////////////////////////////
+	//正在按下拖动图形
+	if((m_bDragFlag == TRUE))
+	{	
+		m_bDragFlag = FALSE;
+		m_flagTracking = TRUE;
+		int nDx = point.x - m_dragPoint.x;
+		int nDy = point.y - m_dragPoint.y;
+		m_headPoint4[m_iDragFlag].x = m_headPoint4[m_iDragFlag].x + nDx;
+		m_headPoint4[m_iDragFlag].y = m_headPoint4[m_iDragFlag].y + nDy;
+		m_tailPoint4[m_iDragFlag].x = m_tailPoint4[m_iDragFlag].x + nDx;
+		m_tailPoint4[m_iDragFlag].y = m_tailPoint4[m_iDragFlag].y + nDy;
+
+		//if(m_headPoint4[m_iDragFlag+1]==m_tailPoint4[m_iDragFlag+1])
+		//{m_headPoint4[m_iDragFlag+1].x = 0;
+		//m_headPoint4[m_iDragFlag+1].y = 0;
+		//m_tailPoint4[m_iDragFlag+1].x = 0;
+		//m_tailPoint4[m_iDragFlag+1].y = 0;
+		//}
+		this->Invalidate(1);  //全屏刷新，擦除背景
+		//AfxMessageBox(_T("test"));
+	}
 }
 
 //回退，删除点位
 void CTFigureDlg::DeleteDataPoint()
-{
+{	
+	this->m_headPoint4[i].x = 0;
+	this->m_headPoint4[i].y = 0;
+	this->m_tailPoint4[i].x = 0;
+	this->m_tailPoint4[i].y = 0;
 	this->m_headPoint3[i].x = 0;
 	this->m_headPoint3[i].y = 0;
 	this->m_tailPoint3[i].x = 0;
@@ -784,6 +910,22 @@ void CTFigureDlg::OnBnClickedButton3()    //回退
 
 		}
 	}
+	//////////////////
+	if(m_bDrawWavy == TRUE)
+	{
+		if(i==0)
+		{
+			AfxMessageBox(_T("不能再退了"));
+			this->Invalidate(1);    //参数设置为1，全屏刷新
+		}
+		else
+		{
+			i--;
+			DeleteDataPoint();
+			this->Invalidate(1);
+
+		}
+	}
 }
 
 
@@ -836,27 +978,66 @@ void CTFigureDlg::ChangeFlag(bool* b)
 	m_bDrawCircle = FALSE;
 	m_bDrawArrow = FALSE;
 	m_bDrawTen = FALSE;
+	m_bDrawWavy = FALSE;
 	*b = TRUE;		
 }
 void CTFigureDlg::OnBnClickedButtonten()  //选择了TEN
 {
 	// TODO: 在此添加控件通知处理程序代码
 	m_bDrawTen = !m_bDrawTen;
-	if(m_bDrawTen = TRUE) 
+	if(m_bDrawTen == TRUE) 
 	{
 		//将其他绘图标记设置为false
 		ChangeFlag(&m_bDrawTen);
 		AfxMessageBox(_T("你选择了TEN"));
 	}
 
-
-
 }
+
+
+void CTFigureDlg::OnBnClickedBwavy()  //选择了波浪线
+{
+	// TODO: 在此添加控件通知处理程序代码
+	m_bDrawWavy = !m_bDrawWavy;
+	if(m_bDrawWavy == TRUE) 
+	{
+		//将其他绘图标记设置为false
+		ChangeFlag(&m_bDrawWavy);
+		AfxMessageBox(_T("你选择了WAVY"));
+	}
+}
+
 void CTFigureDlg::OnBnClickedCurvebutton() //选择了曲线
 {
 
 }
 
+//绘制波浪线
+void CTFigureDlg::DrawWavy(CPoint p1,CPoint p2,double length)
+{
+	CClientDC dc(this);
+	CPen pen,*oldpen;
+	pen.CreatePen(PS_SOLID, 2, RGB(0, 0, 0));
+	oldpen = dc.SelectObject(&pen);
+	CPoint arrPoint[8];
+	int d = (p2.y-p1.y)/7;
+	arrPoint[0] = p1;
+	arrPoint[7] = p2;
+	for(int i = 1;i<7;i++)
+	{
+		arrPoint[i].y = arrPoint[0].y + i*d;
+		if(i%2==0)
+		{
+			arrPoint[i].x = arrPoint[0].x - (int)length;
+		}
+		else
+		{
+			arrPoint[i].x = arrPoint[0].x + (int)length;
+		}
+	}
+	dc.Polyline(arrPoint,8);
+
+}
 
 //绘制十字
 void CTFigureDlg::DrawTen(CPoint p1,CPoint p2,double theta,int length) 
@@ -907,6 +1088,7 @@ void CTFigureDlg::DrawTen(CPoint p1,CPoint p2,double theta,int length)
 	dc.LineTo(P2x,P2y);
 	dc.SelectObject(oldpen);
 }
+
 void CTFigureDlg::DrawArrow(CPoint p1,CPoint p2,double theta,int length)
 {
 	theta=3.1415926*theta/180;
@@ -1002,9 +1184,108 @@ void CTFigureDlg::DrawArrow(CPoint p1,CPoint p2,double theta,int length)
 //	dc.SelectObject(oldpen);
 //}
 
+//递归读取元素
+TiXmlElement* ReadElememt(TiXmlElement* InputElement, char* pName)
+{
+	TiXmlElement* ptemp = NULL;
 
+	if(InputElement == NULL || pName == NULL)
+		return ptemp;
 
+	if (InputElement && 0 == strcmp(pName,InputElement->Value()))
+	{
+		printf("Find the element :%s \n", InputElement->Value());
+		ptemp = InputElement;
+		return ptemp;
+	}
+	else
+	{
+		printf("%s \n", InputElement->Value());
+	}
 
+	TiXmlElement* tmpElement = InputElement;
+	if (tmpElement->FirstChildElement())
+	{
+		ptemp = ReadElememt(tmpElement->FirstChildElement(), pName);
+	}
+	if (!ptemp)
+	{
+		tmpElement = tmpElement->NextSiblingElement();
+		if (tmpElement)
+		{
+			ptemp = ReadElememt(tmpElement ,  pName);
+		}
+	}
+	return ptemp;
+}
+
+TiXmlElement SelectElementByName(char* InputInfo, char* pName, int iXMLType)
+{
+	//注：XMLTYPE 为1时，InputInfo为XML路径，当为2时,InputInfo为二进制文件内容
+	TiXmlDocument cXmlDoc;
+	TiXmlElement* pRootElement = NULL;
+	if (iXMLType == 1)
+	{
+		if (!cXmlDoc.LoadFile(InputInfo))
+		{
+			printf("parse XML file failed \n");
+			return TiXmlElement("");
+		}
+	}
+	else if (iXMLType == 2)
+	{
+		if (!cXmlDoc.Parse(InputInfo))
+		{
+			printf("parse XML failed \n");
+			return TiXmlElement("");
+		}
+	}
+
+	pRootElement = cXmlDoc.RootElement();
+	if (NULL == pRootElement)
+	{
+		printf("no have root Element\n");
+		return TiXmlElement("");
+	}
+	else
+	{
+		TiXmlElement* pTempElement = NULL;
+		pTempElement = ReadElememt(pRootElement, pName);
+		if (pTempElement)
+		{
+			printf("find the Name : %s, Text = %s\n", pTempElement->Value(), pTempElement->GetText());
+		}
+		return *pTempElement;
+	}	
+}
+
+//求vector最大值
+int FindMax(std::vector<int> vecNum )
+{
+	int max = 0;
+	for(std::vector<int>::iterator iter = vecNum.begin();iter !=vecNum.end();iter++)
+	{
+		if(*iter > max)
+		{
+			max = *iter;
+		}
+	}
+	return max;
+}
+
+//求vector最小值
+int FindMin(std::vector<int> vecNum )
+{
+	int min = 0;
+	for(std::vector<int>::iterator iter = vecNum.begin();iter !=vecNum.end();iter++)
+	{
+		if(*iter < min)
+		{
+			min = *iter;
+		}
+	}
+	return min;
+}
 
 void CTFigureDlg::OnBnClickedOpenfilebutton()
 {
@@ -1015,6 +1296,63 @@ void CTFigureDlg::OnBnClickedOpenfilebutton()
 	if(dlg.DoModal() == IDOK)
 	{
 		AfxMessageBox(dlg.GetPathName());
+		USES_CONVERSION;
+		char* pathName = T2A(dlg.GetPathName().GetBuffer(0));
+		dlg.GetPathName().ReleaseBuffer();
+		Sleep(2);
+		TiXmlElement pTempEle = SelectElementByName(pathName,"digits", 1);
+		Sleep(2);
+		//printf("find the Name : %s, Text = %s\n", pTempEle.Value(), pTempEle.GetText());
+		Sleep(2);
+		const char* str = pTempEle.GetText();
+		std::vector<CString> vecString;
+		std::vector<int> vecNum;
+		char tempstr[8];
+		char* p = tempstr;
+		memset(tempstr,0,8);
+		//点向量
+		//std::vector<CPoint>  vecPoint;
+		//点下标
+		double nPointX = 0 ;
+		Sleep(2);
+		for (unsigned int i=0;i<strlen(str)+1;i++)
+		{	
+
+			if((*(str+i) != ' ')&&(*(str+i) != '\0') )
+			{	
+				*p++ = *(str+i);
+			}
+			else
+			{
+				*p++ ='\0';
+				vecString.push_back(CString(tempstr));
+				//MessageBox(vecString.back());
+				m_vecPoint.push_back(CPoint((int)nPointX,(4200-(atoi(tempstr)+610))*0.157+150)); //存放点位
+				nPointX = nPointX + 0.1 ;
+				vecNum.push_back(atoi(tempstr));
+				memset(tempstr,0,8);
+				p = tempstr;
+			}
+		}
+		Sleep(3);
+		char nnn[10];
+		memset(nnn,0,10);
+		//sprintf(nnn,"min:%d",FindMin(vecNum));
+		sprintf(nnn,"min:%d",m_vecPoint.size());
+		AfxMessageBox(CString(nnn));
+		//CClientDC dc(this);
+		//for (int i=0;i<1000;i++)
+		//{
+		//	//point[i] = m_vecPoint[i];
+		//}
+
+		//for(std::vector<int>::iterator iter = vecNum.begin();iter !=vecNum.end();iter++)
+		//{
+		//	std::cout<<*iter;
+		//	std::cout<<" ";
+		//}
+		//CString cstr(pathName);
+		//MessageBox(cstr);
 	}
 
 }
@@ -1062,17 +1400,17 @@ void CTFigureDlg::OnBnClickedButton2()  //保存
 //
 
 
+//
+//
+//void CTFigureDlg::OnBnClickedButton4()
+//{
+//	// TODO: 在此添加控件通知处理程序代码
+//}
 
+//void CTFigureDlg::OnBnClickedButtonwavy()
+//{
+//	// TODO: 在此添加控件通知处理程序代码
+//	AfxMessageBox(_T("你选择了TEN"));
+//	AfxMessageBox(_T("你选择了WAVY"));
+//}
 
-void CTFigureDlg::OnBnClickedButton4()
-{
-	// TODO: 在此添加控件通知处理程序代码
-}
-
-
-void CTFigureDlg::OnBnClickedButtonwavy()
-{
-	// TODO: 在此添加控件通知处理程序代码
-	AfxMessageBox(_T("你选择了TEN"));
-	AfxMessageBox(_T("你选择了WAVY"));
-}

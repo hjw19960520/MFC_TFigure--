@@ -55,6 +55,8 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>uafxcwd.lib;Libcmtd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>uafxcwd.lib;Libcmtd.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
     </Link>
     <Midl>
       <MkTypLibCompatible>false</MkTypLibCompatible>
@@ -94,6 +96,9 @@
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <None Include="2014-FDA.xml">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="D:\arrow.bmp" />
     <None Include="d:\bitmap1.bmp" />
     <None Include="D:\ten.bmp" />
@@ -107,6 +112,8 @@
     <ClInclude Include="targetver.h" />
     <ClInclude Include="TFigure.h" />
     <ClInclude Include="TFigureDlg.h" />
+    <ClInclude Include="tinystr.h" />
+    <ClInclude Include="tinyxml.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -115,6 +122,10 @@
     </ClCompile>
     <ClCompile Include="TFigure.cpp" />
     <ClCompile Include="TFigureDlg.cpp" />
+    <ClCompile Include="tinystr.cpp" />
+    <ClCompile Include="tinyxml.cpp" />
+    <ClCompile Include="tinyxmlerror.cpp" />
+    <ClCompile Include="tinyxmlparser.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="TFigure.rc" />

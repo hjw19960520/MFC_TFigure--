@@ -4,6 +4,7 @@
 
 #pragma once
 #include "afxwin.h"
+#include "atltypes.h"
 
 
 // CTFigureDlg 对话框
@@ -63,6 +64,12 @@ public:
 	CPoint m_tailPoint2[1024];
 	CPoint m_headPoint3[1024];//TEN
 	CPoint m_tailPoint3[1024];
+	CPoint m_headPoint4[1024];//Wavy
+	CPoint m_tailPoint4[1024];
+	//点向量
+	std::vector<CPoint>  m_vecPoint;
+
+	CPoint point[10002];
 	int i;
 	afx_msg void OnBnClickedButton3();
 	afx_msg void OnBnClickedLinebutton();
@@ -88,13 +95,28 @@ public:
 	CButton m_buttonTen;
 	// 箭头button
 	CButton m_buttonArrow;
-	afx_msg void OnBnClickedButton4();
-	afx_msg void OnBnClickedButtonwavy();
+	//afx_msg void OnBnClickedButton4();
+	//afx_msg void OnBnClickedButtonwavy();
 	// 波浪线
 	CButton m_buttonWavy;
 	// TEN
 	bool m_bDrawTen;
 	void CTFigureDlg::ChangeFlag(bool* b);
 	void CTFigureDlg::DeleteDataPoint();
+	void CTFigureDlg::drawCordinate(CPoint point);
+	void CTFigureDlg::DrawWavy(CPoint p1,CPoint p2,double length);
 
+	afx_msg void OnBnClickedBwavy(); //选择波浪线
+	// 绘制波浪线
+	bool m_bDrawWavy;
+	// 找到位置，切换四向箭头
+	bool m_bSizeAll;
+	// 记录拖拽鼠标按下位置
+	CPoint m_dragPoint;
+	// 记录鼠标拖拽开始
+	bool m_bDragFlag;
+	// Drag起始点的head 下标
+	int m_iDragFlag;
+	// 禁止四向箭头标记
+	bool m_bForbidSizeAll;
 };
