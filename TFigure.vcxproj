@@ -41,9 +41,11 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\Users\zousijia\Documents\Visual Studio 2010\Projects\Tracker\TFigure\include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
+    <IncludePath>C:\Users\zousijia\Documents\Visual Studio 2010\Projects\Tracker\TFigure\include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -77,12 +79,15 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>uafxcw.lib;LIBCMT.lib</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>LIBCMT.lib;uafxcw.lib</IgnoreSpecificDefaultLibraries>
     </Link>
     <Midl>
       <MkTypLibCompatible>false</MkTypLibCompatible>
@@ -96,17 +101,42 @@
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <None Include="..\..\..\..\..\Downloads\favicon.ico" />
     <None Include="2014-FDA.xml">
       <SubType>Designer</SubType>
     </None>
     <None Include="D:\arrow.bmp" />
     <None Include="d:\bitmap1.bmp" />
+    <None Include="d:\bitmap2.bmp" />
+    <None Include="d:\bmp00001.bmp" />
+    <None Include="d:\bmp00002.bmp" />
+    <None Include="d:\bmp00003.bmp" />
+    <None Include="d:\bmp00004.bmp" />
+    <None Include="d:\bmp00005.bmp" />
+    <None Include="d:\bmp00006.bmp" />
+    <None Include="d:\bmp00007.bmp" />
+    <None Include="d:\bmp00008.bmp" />
+    <None Include="d:\bmp00009.bmp" />
+    <None Include="d:\bmp00010.bmp" />
+    <None Include="d:\bmp00011.bmp" />
+    <None Include="d:\bmp00012.bmp" />
+    <None Include="d:\bmp00013.bmp" />
     <None Include="D:\ten.bmp" />
+    <None Include="F:\Users\zousijia\Desktop\箭头.bmp" />
     <None Include="ReadMe.txt" />
     <None Include="res\TFigure.ico" />
     <None Include="res\TFigure.rc2" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="gragh.h" />
+    <ClInclude Include="include\json\autolink.h" />
+    <ClInclude Include="include\json\config.h" />
+    <ClInclude Include="include\json\features.h" />
+    <ClInclude Include="include\json\forwards.h" />
+    <ClInclude Include="include\json\json.h" />
+    <ClInclude Include="include\json\reader.h" />
+    <ClInclude Include="include\json\value.h" />
+    <ClInclude Include="include\json\writer.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
@@ -116,6 +146,9 @@
     <ClInclude Include="tinyxml.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\lib_json\json_reader.cpp" />
+    <ClCompile Include="src\lib_json\json_value.cpp" />
+    <ClCompile Include="src\lib_json\json_writer.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>

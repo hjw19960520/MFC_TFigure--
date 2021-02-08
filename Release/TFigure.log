@@ -1,0 +1,296 @@
+﻿生成启动时间为 2021/2/1 14:39:56。
+     1>项目“C:\Users\zousijia\documents\visual studio 2010\Projects\Tracker\TFigure\TFigure.vcxproj”在节点 2 上(build 个目标)。
+     1>InitializeBuildStatus:
+         正在创建“Release\TFigure.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+       ClCompile:
+         所有输出均为最新。
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D _WINDOWS /D NDEBUG /D _UNICODE /D UNICODE /Gm- /EHsc /MT /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Release\TFigure.pch" /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt TFigure.cpp TFigureDlg.cpp
+         TFigure.cpp
+     1>c:\users\zousijia\documents\visual studio 2010\projects\tracker\tfigure\TFigureDlg.h(31): warning C4067: 预处理器指令后有意外标记 - 应输入换行符
+         TFigureDlg.cpp
+     1>c:\users\zousijia\documents\visual studio 2010\projects\tracker\tfigure\TFigureDlg.h(31): warning C4067: 预处理器指令后有意外标记 - 应输入换行符
+     1>TFigureDlg.cpp(72): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(74): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(235): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\string.h(105) : 参见“strcpy”的声明
+     1>TFigureDlg.cpp(237): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\string.h(197) : 参见“strtok”的声明
+     1>TFigureDlg.cpp(239): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\string.h(197) : 参见“strtok”的声明
+     1>TFigureDlg.cpp(512): warning C4067: 预处理器指令后有意外标记 - 应输入换行符
+     1>TFigureDlg.cpp(512): warning C4067: 预处理器指令后有意外标记 - 应输入换行符
+     1>TFigureDlg.cpp(558): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(371) : 参见“sprintf”的声明
+     1>TFigureDlg.cpp(559): warning C4067: 预处理器指令后有意外标记 - 应输入换行符
+     1>TFigureDlg.cpp(559): warning C4067: 预处理器指令后有意外标记 - 应输入换行符
+     1>TFigureDlg.cpp(612): warning C4067: 预处理器指令后有意外标记 - 应输入换行符
+     1>TFigureDlg.cpp(613): warning C4067: 预处理器指令后有意外标记 - 应输入换行符
+     1>TFigureDlg.cpp(650): warning C4067: 预处理器指令后有意外标记 - 应输入换行符
+     1>TFigureDlg.cpp(651): warning C4067: 预处理器指令后有意外标记 - 应输入换行符
+     1>TFigureDlg.cpp(905): warning C4258: “i”: 忽略 For 循环中的定义；使用封闭范围中的定义
+                 TFigureDlg.cpp(884) : 忽略“i”的定义
+                 c:\users\zousijia\documents\visual studio 2010\projects\tracker\tfigure\TFigureDlg.h(158) : 使用“CTFigureDlg::i”的定义
+     1>TFigureDlg.cpp(928): warning C4258: “i”: 忽略 For 循环中的定义；使用封闭范围中的定义
+                 TFigureDlg.cpp(884) : 忽略“i”的定义
+                 c:\users\zousijia\documents\visual studio 2010\projects\tracker\tfigure\TFigureDlg.h(158) : 使用“CTFigureDlg::i”的定义
+     1>TFigureDlg.cpp(972): warning C4258: “i”: 忽略 For 循环中的定义；使用封闭范围中的定义
+                 TFigureDlg.cpp(884) : 忽略“i”的定义
+                 c:\users\zousijia\documents\visual studio 2010\projects\tracker\tfigure\TFigureDlg.h(158) : 使用“CTFigureDlg::i”的定义
+     1>TFigureDlg.cpp(1011): warning C4258: “i”: 忽略 For 循环中的定义；使用封闭范围中的定义
+                 TFigureDlg.cpp(884) : 忽略“i”的定义
+                 c:\users\zousijia\documents\visual studio 2010\projects\tracker\tfigure\TFigureDlg.h(158) : 使用“CTFigureDlg::i”的定义
+     1>TFigureDlg.cpp(1036): warning C4258: “i”: 忽略 For 循环中的定义；使用封闭范围中的定义
+                 TFigureDlg.cpp(884) : 忽略“i”的定义
+                 c:\users\zousijia\documents\visual studio 2010\projects\tracker\tfigure\TFigureDlg.h(158) : 使用“CTFigureDlg::i”的定义
+     1>TFigureDlg.cpp(1055): warning C4258: “i”: 忽略 For 循环中的定义；使用封闭范围中的定义
+                 TFigureDlg.cpp(884) : 忽略“i”的定义
+                 c:\users\zousijia\documents\visual studio 2010\projects\tracker\tfigure\TFigureDlg.h(158) : 使用“CTFigureDlg::i”的定义
+     1>TFigureDlg.cpp(1111): warning C4258: “i”: 忽略 For 循环中的定义；使用封闭范围中的定义
+                 TFigureDlg.cpp(884) : 忽略“i”的定义
+                 c:\users\zousijia\documents\visual studio 2010\projects\tracker\tfigure\TFigureDlg.h(158) : 使用“CTFigureDlg::i”的定义
+     1>TFigureDlg.cpp(1165): warning C4018: “<”: 有符号/无符号不匹配
+     1>TFigureDlg.cpp(1642): warning C4067: 预处理器指令后有意外标记 - 应输入换行符
+     1>TFigureDlg.cpp(1642): warning C4067: 预处理器指令后有意外标记 - 应输入换行符
+     1>TFigureDlg.cpp(2652): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(371) : 参见“sprintf”的声明
+     1>TFigureDlg.cpp(3488): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(3488): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(3489): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(3489): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(3546): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(3546): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(3547): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(3547): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(3619): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(3619): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(3620): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(3620): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(3668): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(3668): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(3669): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(3669): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(3713): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(3713): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(3715): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(3715): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(3760): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(3760): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(3762): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(3762): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(3802): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(3802): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(3986): warning C4067: 预处理器指令后有意外标记 - 应输入换行符
+     1>TFigureDlg.cpp(3986): warning C4067: 预处理器指令后有意外标记 - 应输入换行符
+     1>TFigureDlg.cpp(4008): warning C4067: 预处理器指令后有意外标记 - 应输入换行符
+     1>TFigureDlg.cpp(4008): warning C4067: 预处理器指令后有意外标记 - 应输入换行符
+     1>TFigureDlg.cpp(4054): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(371) : 参见“sprintf”的声明
+     1>TFigureDlg.cpp(4055): warning C4067: 预处理器指令后有意外标记 - 应输入换行符
+     1>TFigureDlg.cpp(4055): warning C4067: 预处理器指令后有意外标记 - 应输入换行符
+     1>TFigureDlg.cpp(4236): warning C4067: 预处理器指令后有意外标记 - 应输入换行符
+     1>TFigureDlg.cpp(4236): warning C4067: 预处理器指令后有意外标记 - 应输入换行符
+     1>TFigureDlg.cpp(4377): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(4377): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(4411): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(4411): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(4447): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(4447): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(4448): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(4448): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(4449): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(4449): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(4450): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(4450): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(4452): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(4452): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(4452): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(4452): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(4476): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(4476): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(4477): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(4477): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(4478): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(4478): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(4479): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(4479): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(4481): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(4481): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(4481): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(4481): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(4504): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(4504): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(4536): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(4536): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(4567): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(4567): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(4598): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(4598): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(4632): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(4632): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(4663): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(4663): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(4697): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(4697): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(4735): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(4735): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(4772): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(4773): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(4950): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(4950): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(4983): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(4983): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(5015): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(5015): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(5046): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(5046): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(5079): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(5079): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(5079): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(5079): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(5080): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(5080): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(5080): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(5080): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(5081): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(5081): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(5081): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(5081): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(5082): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(5082): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(5083): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(5083): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(5105): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(5105): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(5105): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(5105): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(5106): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(5106): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(5106): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(5106): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(5107): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(5107): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(5107): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(5107): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(5108): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(5108): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(5109): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(5109): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(5160): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(5160): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(5160): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(5160): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(5209): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(5209): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(5209): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(5209): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(5233): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(5233): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(5265): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(5265): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(5302): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(5302): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(5303): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(5303): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(5335): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(5335): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(5336): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(5336): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+     1>TFigureDlg.cpp(5471): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(371) : 参见“sprintf”的声明
+     1>TFigureDlg.cpp(5480): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(371) : 参见“sprintf”的声明
+     1>TFigureDlg.cpp(5489): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(371) : 参见“sprintf”的声明
+     1>TFigureDlg.cpp(5532): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(371) : 参见“sprintf”的声明
+     1>TFigureDlg.cpp(5534): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(371) : 参见“sprintf”的声明
+     1>TFigureDlg.cpp(5535): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(371) : 参见“sprintf”的声明
+     1>TFigureDlg.cpp(5536): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(371) : 参见“sprintf”的声明
+     1>TFigureDlg.cpp(5537): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(371) : 参见“sprintf”的声明
+     1>TFigureDlg.cpp(5540): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(371) : 参见“sprintf”的声明
+     1>TFigureDlg.cpp(5543): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(371) : 参见“sprintf”的声明
+     1>TFigureDlg.cpp(5546): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(371) : 参见“sprintf”的声明
+     1>TFigureDlg.cpp(5549): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(371) : 参见“sprintf”的声明
+     1>TFigureDlg.cpp(5753): warning C4067: 预处理器指令后有意外标记 - 应输入换行符
+     1>TFigureDlg.cpp(5753): warning C4067: 预处理器指令后有意外标记 - 应输入换行符
+     1>TFigureDlg.cpp(5776): warning C4067: 预处理器指令后有意外标记 - 应输入换行符
+     1>TFigureDlg.cpp(5776): warning C4067: 预处理器指令后有意外标记 - 应输入换行符
+     1>TFigureDlg.cpp(5796): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\string.h(105) : 参见“strcpy”的声明
+     1>TFigureDlg.cpp(5809): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(371) : 参见“sprintf”的声明
+     1>TFigureDlg.cpp(5818): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(371) : 参见“sprintf”的声明
+     1>TFigureDlg.cpp(5827): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(371) : 参见“sprintf”的声明
+     1>TFigureDlg.cpp(5843): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(371) : 参见“sprintf”的声明
+     1>TFigureDlg.cpp(5844): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(371) : 参见“sprintf”的声明
+     1>TFigureDlg.cpp(5845): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(371) : 参见“sprintf”的声明
+     1>TFigureDlg.cpp(5846): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(371) : 参见“sprintf”的声明
+     1>TFigureDlg.cpp(6007): warning C4067: 预处理器指令后有意外标记 - 应输入换行符
+     1>TFigureDlg.cpp(6007): warning C4067: 预处理器指令后有意外标记 - 应输入换行符
+     1>TFigureDlg.cpp(6031): warning C4067: 预处理器指令后有意外标记 - 应输入换行符
+     1>TFigureDlg.cpp(6031): warning C4067: 预处理器指令后有意外标记 - 应输入换行符
+     1>TFigureDlg.cpp(6075): warning C4067: 预处理器指令后有意外标记 - 应输入换行符
+     1>TFigureDlg.cpp(6075): warning C4067: 预处理器指令后有意外标记 - 应输入换行符
+     1>TFigureDlg.cpp(6176): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(371) : 参见“sprintf”的声明
+     1>TFigureDlg.cpp(6177): warning C4067: 预处理器指令后有意外标记 - 应输入换行符
+     1>TFigureDlg.cpp(6177): warning C4067: 预处理器指令后有意外标记 - 应输入换行符
+     1>TFigureDlg.cpp(6374): warning C4067: 预处理器指令后有意外标记 - 应输入换行符
+     1>TFigureDlg.cpp(6374): warning C4067: 预处理器指令后有意外标记 - 应输入换行符
+     1>TFigureDlg.cpp(6431): warning C4067: 预处理器指令后有意外标记 - 应输入换行符
+     1>TFigureDlg.cpp(6431): warning C4067: 预处理器指令后有意外标记 - 应输入换行符
+     1>TFigureDlg.cpp(6691): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\string.h(105) : 参见“strcpy”的声明
+     1>TFigureDlg.cpp(6693): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\string.h(197) : 参见“strtok”的声明
+     1>TFigureDlg.cpp(6697): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\string.h(197) : 参见“strtok”的声明
+     1>TFigureDlg.cpp(6749): warning C4067: 预处理器指令后有意外标记 - 应输入换行符
+     1>TFigureDlg.cpp(6749): warning C4067: 预处理器指令后有意外标记 - 应输入换行符
+     1>TFigureDlg.cpp(6834): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(371) : 参见“sprintf”的声明
+     1>TFigureDlg.cpp(6848): warning C4067: 预处理器指令后有意外标记 - 应输入换行符
+     1>TFigureDlg.cpp(6848): warning C4067: 预处理器指令后有意外标记 - 应输入换行符
+     1>TFigureDlg.cpp(6880): warning C4067: 预处理器指令后有意外标记 - 应输入换行符
+     1>TFigureDlg.cpp(6880): warning C4067: 预处理器指令后有意外标记 - 应输入换行符
+       ResourceCompile:
+         所有输出均为最新。
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\zousijia\documents\visual studio 2010\Projects\Tracker\Release\TFigure.exe" /INCREMENTAL:NO /NOLOGO uafxcw.lib LIBCMT.lib /NODEFAULTLIB:LIBCMT.lib /NODEFAULTLIB:uafxcw.lib /MANIFEST /ManifestFile:"Release\TFigure.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\zousijia\documents\visual studio 2010\Projects\Tracker\Release\TFigure.pdb" /SUBSYSTEM:WINDOWS /OPT:REF /OPT:ICF /LTCG /TLBID:1 /ENTRY:"wWinMainCRTStartup" /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\zousijia\documents\visual studio 2010\Projects\Tracker\Release\TFigure.lib" /MACHINE:X86 Release\TFigure.res
+         Release\json_reader.obj
+         Release\json_value.obj
+         Release\json_writer.obj
+         Release\stdafx.obj
+         Release\TFigure.obj
+         Release\TFigureDlg.obj
+         Release\tinystr.obj
+         Release\tinyxml.obj
+         Release\tinyxmlerror.obj
+         Release\tinyxmlparser.obj
+         正在生成代码
+         已完成代码的生成
+         TFigure.vcxproj -> C:\Users\zousijia\documents\visual studio 2010\Projects\Tracker\Release\TFigure.exe
+       Manifest:
+         c:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\Users\zousijia\documents\visual studio 2010\Projects\Tracker\Release\TFigure.exe;#1" /manifest Release\TFigure.exe.intermediate.manifest "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\Include\Manifest\dpiaware.manifest"
+       FinalizeBuildStatus:
+         正在删除文件“Release\TFigure.unsuccessfulbuild”。
+         正在对“Release\TFigure.lastbuildstate”执行 Touch 任务。
+     1>已完成生成项目“C:\Users\zousijia\documents\visual studio 2010\Projects\Tracker\TFigure\TFigure.vcxproj”(build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:19.52

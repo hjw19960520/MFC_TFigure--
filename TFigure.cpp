@@ -11,6 +11,7 @@
 #endif
 
 
+
 // CTFigureApp
 
 BEGIN_MESSAGE_MAP(CTFigureApp, CWinApp)
@@ -87,7 +88,13 @@ BOOL CTFigureApp::InitInstance()
 	{
 		delete pShellManager;
 	}
+	// Parse command line for standard shell commands, DDE, file open
+	CCommandLineInfo cmdInfo;
+	ParseCommandLine(cmdInfo);
 
+	// Dispatch commands specified on the command line
+	if (!ProcessShellCommand(cmdInfo))
+		return FALSE;
 	// 由于对话框已关闭，所以将返回 FALSE 以便退出应用程序，
 	//  而不是启动应用程序的消息泵。
 	return FALSE;

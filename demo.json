@@ -1,0 +1,199 @@
+{
+   "age" : 21,
+   "friends" : {
+      "friend_age" : 21,
+      "friend_name" : "ZhaoWuxian",
+      "friend_sex" : "man"
+   },
+   "hobby" : [ "sing", "run", "Tai Chi" ],
+   "name" : "shuiyixin",
+   "sex" : "man"
+}
+{
+   "age" : 21,
+   "friends" : {
+      "friend_age" : 21,
+      "friend_name" : "ZhaoWuxian",
+      "friend_sex" : "man"
+   },
+   "hobby" : [ "sing", "run", "Tai Chi" ],
+   "name" : "shuiyixin",
+   "sex" : "man"
+}
+{
+   "Lead" : 1,
+   "Patient_Information" : {
+      "age" : 21,
+      "name" : "shuiyixin",
+      "sex" : "man"
+   },
+   "XmlFileName" : "F:\\Users\\zousijia\\Desktop\\Ecg trapezoid diagram tools\\data _test\\2014-FD姝㈠搱鍝?    A.xml",
+   "data" : {
+      "3_4" : {
+         "0" : [ null, 340, 45, 340, 1825 ],
+         "1" : [ null, 400, 45, 400, 1825 ],
+         "2" : [ null, 460, 45, 460, 1825 ],
+         "3" : [ null, 520, 45, 520, 1825 ]
+      },
+      "5_6" : {
+         "0" : [ null, 0, 0, 0, 0 ],
+         "1" : [ null, 0, 0, 0, 0 ],
+         "2" : [ null, 0, 0, 0, 0 ],
+         "3" : [ null, 0, 0, 0, 0 ],
+         "4" : [ null, 0, 0, 0, 0 ],
+         "5" : [ null, 0, 0, 0, 0 ]
+      },
+      "7_8" : {
+         "0" : [ null, 0, 0, 0, 0 ],
+         "1" : [ null, 0, 0, 0, 0 ],
+         "2" : [ null, 0, 0, 0, 0 ],
+         "3" : [ null, 0, 0, 0, 0 ],
+         "4" : [ null, 0, 0, 0, 0 ],
+         "5" : [ null, 0, 0, 0, 0 ],
+         "6" : [ null, 0, 0, 0, 0 ],
+         "7" : [ null, 0, 0, 0, 0 ]
+      },
+      "backToWhere" : 0
+   },
+   "hobby" : [ "sing", "run", "Tai Chi" ],
+   "strAVS" : [
+      "A",
+      "A-V",
+      "V",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+   ]
+}
+{
+   "Lead" : 1,
+   "Patient_Information" : {
+      "age" : 21,
+      "name" : "shuiyixin",
+      "sex" : "man"
+   },
+   "XmlFileName" : "F:\\Users\\zousijia\\Desktop\\Ecg trapezoid diagram tools\\data _test\\2014-FD姝㈠搱鍝?    A.xml",
+   "data" : {
+      "3_4" : {
+         "0" : [ null, 340, 45, 340, 1825 ],
+         "1" : [ null, 400, 45, 400, 1825 ],
+         "2" : [ null, 460, 45, 460, 1825 ],
+         "3" : [ null, 520, 45, 520, 1825 ]
+      },
+      "5_6" : {
+         "0" : [ null, 0, 0, 0, 0 ],
+         "1" : [ null, 0, 0, 0, 0 ],
+         "2" : [ null, 0, 0, 0, 0 ],
+         "3" : [ null, 0, 0, 0, 0 ],
+         "4" : [ null, 0, 0, 0, 0 ],
+         "5" : [ null, 0, 0, 0, 0 ]
+      },
+      "7_8" : {
+         "0" : [ null, 0, 0, 0, 0 ],
+         "1" : [ null, 0, 0, 0, 0 ],
+         "2" : [ null, 0, 0, 0, 0 ],
+         "3" : [ null, 0, 0, 0, 0 ],
+         "4" : [ null, 0, 0, 0, 0 ],
+         "5" : [ null, 0, 0, 0, 0 ],
+         "6" : [ null, 0, 0, 0, 0 ],
+         "7" : [ null, 0, 0, 0, 0 ]
+      },
+      "backToWhere" : 0
+   },
+   "hobby" : [ "sing", "run", "Tai Chi" ],
+   "strAVS" : [
+      "A",
+      "A-V",
+      "V",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+   ]
+}
+{
+   "Lead" : 1,
+   "Patient_Information" : {
+      "age" : 21,
+      "name" : "shuiyixin",
+      "sex" : "man"
+   },
+   "XmlFileName" : "F:\\Users\\zousijia\\Desktop\\Ecg trapezoid diagram tools\\data _test\\2014-FD姝㈠搱鍝?    A.xml",
+   "data" : {
+      "3_4" : {
+         "0" : [ null, 340, 45, 340, 1825 ],
+         "1" : [ null, 400, 45, 400, 1825 ],
+         "2" : [ null, 460, 45, 460, 1825 ],
+         "3" : [ null, 520, 45, 520, 1825 ]
+      },
+      "5_6" : {
+         "0" : [ null, 0, 0, 0, 0 ],
+         "1" : [ null, 0, 0, 0, 0 ],
+         "2" : [ null, 0, 0, 0, 0 ],
+         "3" : [ null, 0, 0, 0, 0 ],
+         "4" : [ null, 0, 0, 0, 0 ],
+         "5" : [ null, 0, 0, 0, 0 ]
+      },
+      "7_8" : {
+         "0" : [ null, 0, 0, 0, 0 ],
+         "1" : [ null, 0, 0, 0, 0 ],
+         "2" : [ null, 0, 0, 0, 0 ],
+         "3" : [ null, 0, 0, 0, 0 ],
+         "4" : [ null, 0, 0, 0, 0 ],
+         "5" : [ null, 0, 0, 0, 0 ],
+         "6" : [ null, 0, 0, 0, 0 ],
+         "7" : [ null, 0, 0, 0, 0 ]
+      },
+      "backToWhere" : 0
+   },
+   "hobby" : [ "sing", "run", "Tai Chi" ],
+   "strAVS" : [
+      "A",
+      "A-V",
+      "V",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+   ]
+}

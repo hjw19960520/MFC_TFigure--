@@ -34,12 +34,57 @@
     <None Include="2014-FDA.xml">
       <Filter>资源文件</Filter>
     </None>
+    <None Include="..\..\..\..\..\Downloads\favicon.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="F:\Users\zousijia\Desktop\箭头.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="d:\bmp00001.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="d:\bmp00002.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="d:\bmp00003.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="d:\bmp00004.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="d:\bmp00005.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="d:\bmp00006.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="d:\bitmap2.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="d:\bmp00007.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="d:\bmp00008.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="d:\bmp00009.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="d:\bmp00010.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="d:\bmp00011.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="d:\bmp00012.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="d:\bmp00013.bmp">
+      <Filter>资源文件</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="TFigure.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="TFigureDlg.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="stdafx.h">
@@ -55,6 +100,36 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="tinyxml.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\json\autolink.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\json\config.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\json\features.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\json\forwards.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\json\json.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\json\reader.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\json\value.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\json\writer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="TFigureDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="gragh.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
@@ -78,6 +153,15 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="tinyxmlparser.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lib_json\json_reader.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lib_json\json_value.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lib_json\json_writer.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

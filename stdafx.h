@@ -8,11 +8,15 @@
 #ifndef _SECURE_ATL
 #define _SECURE_ATL 1
 #endif
-#include <math.h>
+#include <math.h> 
+#include <cmath> 
+#include <algorithm>
+//#include <cmath>
+//#include <iostream>
 #ifndef VC_EXTRALEAN
 #define VC_EXTRALEAN            // 从 Windows 头中排除极少使用的资料
 #endif
-
+//#include <fstream>
 #include "targetver.h"
 
 #define _ATL_CSTRING_EXPLICIT_CONSTRUCTORS      // 某些 CString 构造函数将是显式的
@@ -30,6 +34,9 @@
 #include <afxwin.h>         // MFC 核心组件和标准组件
 #include <afxext.h>         // MFC 扩展
 //#include <iostream>
+//json
+#include <json/json.h>
+//#include <iostream>  
 
 #include <afxdisp.h>        // MFC 自动化类
 

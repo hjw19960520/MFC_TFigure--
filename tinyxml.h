@@ -150,6 +150,7 @@ public:
 	virtual bool Visit( const TiXmlUnknown& /*unknown*/ )			{ return true; }
 };
 
+
 // Only used by Attribute::Query functions
 enum 
 { 

@@ -21,9 +21,9 @@ must not be misrepresented as being the original software.
 3. This notice may not be removed or altered from any source
 distribution.
 */
-
-#include "tinyxml.h"
 #include "stdafx.h"
+#include "tinyxml.h"
+
 // The goal of the seperate error file is to make the first
 // step towards localization. tinyxml (currently) only supports
 // english error messages, but the could now be translated.
